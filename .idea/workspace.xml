@@ -7,6 +7,7 @@
     <list default="true" id="7ae39fd5-ddac-41e4-afa1-f3d22621f9f4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_google_maps_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_google_maps_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/checking.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/checking.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,11 +55,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684919178760</updated>
-      <workItem from="1684919182561" duration="6033000" />
+      <workItem from="1684919182561" duration="9777000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/apiProject$.coverage" NAME=" Coverage Results" MODIFIED="1684932005211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
 </project>
