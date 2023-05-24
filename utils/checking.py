@@ -20,3 +20,22 @@ class Checking():
         token = json.loads(responce.text)
         assert list(token) == expected_value
         print('Expected values was received!')
+
+    """Method for checking mandatory field values in the prompt response"""
+
+    @staticmethod
+    def check_json_values(responce: Response, field_name, expected_value):
+        check = responce.json()
+        check_info = check.get(field_name)
+        assert check_info == expected_value
+        print(field_name + ":" + ' value is correct')
+
+    """Method for checking mandatory field values by certain words in the prompt response"""
+    @staticmethod
+    def check_json_search_word_in_values(responce: Response, field_name, search_value):
+        check = responce.json()
+        check_info = check.get(field_name)
+        if search_value in check_info:
+            print("Word " + search_value + ":" + 'was found')
+        else:
+            print("Word " + search_value + ":" + 'was not found')
