@@ -1,5 +1,5 @@
 import json
-
+import allure
 from utils.api import Google_maps_api
 from requests import Response
 from utils.checking import Checking
@@ -7,8 +7,9 @@ from utils.checking import Checking
 """Creating, updating, deleting new location"""
 
 
+@allure.epic('Test create place')
 class Test_create_place():
-
+    @allure.description("Test create, update, delete new location")
     def test_create_new_place(self):
         print("Post method")
         result_post: Response = Google_maps_api.create_new_place()
@@ -21,7 +22,9 @@ class Test_create_place():
         print("Get method for post method")
         result_get: Response = Google_maps_api.get_new_place(place_id)
         Checking.check_status_code(result_get, 200)
-        Checking.check_json_token(result_get, ['location', 'accuracy', 'name', 'phone_number', 'address', 'types', 'website', 'language'])
+        Checking.check_json_token(result_get,
+                                  ['location', 'accuracy', 'name', 'phone_number', 'address', 'types', 'website',
+                                   'language'])
         Checking.check_json_values(result_get, 'address', '29, side layout, cohen 09')
 
         print('Put method')
@@ -33,7 +36,9 @@ class Test_create_place():
         print("Get method for put method")
         result_get: Response = Google_maps_api.get_new_place(place_id)
         Checking.check_status_code(result_get, 200)
-        Checking.check_json_token(result_get, ['location', 'accuracy', 'name', 'phone_number', 'address', 'types', 'website', 'language'])
+        Checking.check_json_token(result_get,
+                                  ['location', 'accuracy', 'name', 'phone_number', 'address', 'types', 'website',
+                                   'language'])
         Checking.check_json_values(result_get, 'address', '100 Lenina street, RU')
 
         print('Delete method')
