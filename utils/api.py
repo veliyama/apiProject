@@ -1,15 +1,16 @@
 from utils.http_methods import Http_method
+
 """Methods for testing Google Maps API"""
 base_url = 'https://rahulshettyacademy.com'
 key = '?key=qaclick123'
 
-class Google_maps_api():
 
+class Google_maps_api():
     """Method for creating new location"""
 
     @staticmethod
     def create_new_place():
-        post_resource = '/maps/api/place/add/json'  #Post method resource
+        post_resource = '/maps/api/place/add/json'  # Post method resource
         json_create_new_place = {
             "location": {
                 "lat": -38.383494,
@@ -31,3 +32,13 @@ class Google_maps_api():
         print('Prompt result:' + result_post.text)
         return result_post
 
+    """Method for verifying of creation new location"""
+
+    @staticmethod
+    def get_new_place(place_id):
+        get_resource = '/maps/api/place/get/json'  # Get method resource
+        get_url = base_url + get_resource + key + '&place_id=' + place_id
+        print(get_url)
+        get_result = Http_method.get(get_url)
+        print('Prompt result' + get_result.text)
+        return get_result
