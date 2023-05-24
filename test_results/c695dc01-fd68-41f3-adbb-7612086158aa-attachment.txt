@@ -1,0 +1,37 @@
+Post method
+https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Prompt result: {"status":"OK","place_id":"9ce8a845d7c1199e1509a44b6fc7f447","scope":"APP","reference":"1d57e7a19ccae317fab2f39a4f06c0f51d57e7a19ccae317fab2f39a4f06c0f5","id":"1d57e7a19ccae317fab2f39a4f06c0f5"}
+Status code is valid: 200
+Expected values was received!
+status: value is correct
+Get method for post method
+https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=9ce8a845d7c1199e1509a44b6fc7f447
+Prompt result: {"location":{"latitude":"-38.383494","longitude":"33.427362"},"accuracy":"50","name":"Frontline house","phone_number":"(+91) 983 893 3937","address":"29, side layout, cohen 09","types":"shoe park,shop","website":"http:\/\/google.com","language":"French-IN"}
+Status code is valid: 200
+Expected values was received!
+address: value is correct
+Put method
+https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123&place_id=9ce8a845d7c1199e1509a44b6fc7f447
+Prompt result: {"msg":"Address successfully updated"}
+Status code is valid: 200
+Expected values was received!
+msg: value is correct
+Get method for put method
+https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=9ce8a845d7c1199e1509a44b6fc7f447
+Prompt result: {"location":{"latitude":"-38.383494","longitude":"33.427362"},"accuracy":"50","name":"Frontline house","phone_number":"(+91) 983 893 3937","address":"100 Lenina street, RU","types":"shoe park,shop","website":"http:\/\/google.com","language":"French-IN"}
+Status code is valid: 200
+Expected values was received!
+address: value is correct
+Delete method
+https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
+Prompt result: {"status":"OK"}
+Status code is valid: 200
+Expected values was received!
+status: value is correct
+Get method for delete method
+https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=9ce8a845d7c1199e1509a44b6fc7f447
+Prompt result: {"msg":"Get operation failed, looks like place_id  doesn't exists"}
+Status code is valid: 404
+Expected values was received!
+Word failed:was found
+Test was successful
